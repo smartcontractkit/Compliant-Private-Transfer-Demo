@@ -44,7 +44,7 @@ forge build --via-ir
 
 # Set environment variables
 export PRIVATE_KEY=<0xyour_private_key>
-export RPC_URL=<your_rpc_url>
+export RPC_URL=<your_eth_sepolia_rpc_url>
 ```
 
 ## Foundry Scripts
@@ -180,7 +180,12 @@ Open https://convergence2026-token-api.cldev.cloud/private-transfer with Account
 
 Sign and submit. The off-chain service enforces compliance by calling the on-chain PolicyEngine's `checkPrivateTransferAllowed()` function via an off-chain read (`eth_call`), so no transaction information or metadata is exposed on-chain.
 
-### Step 13 — Switch to Account 2 and Request Withdrawal
+### Step 13 — Switch to Account 2 and Verify Transfer
+
+Switch MetaMask to **Account 2**. Open https://convergence2026-token-api.cldev.cloud/balances and sign the balance request. The balance should now show the tokens received from Account 1's private transfer (e.g., 1 token).
+
+
+### Step 14 — Request Withdrawal
 
 Switch MetaMask to **Account 2**. Open https://convergence2026-token-api.cldev.cloud/withdraw and sign a withdrawal request for the token you just received.
 
@@ -210,7 +215,7 @@ The API will return a response as below:
 
 **Copy the `ticket`, `amount` values** — you will need them for the next step.
 
-### Step 14 — Redeem the Ticket On-chain (Script)
+### Step 15 — Redeem the Ticket On-chain (Script)
 
 Run the `07_WithdrawWithTicket.s.sol` script using **Account 2's private key**:
 
