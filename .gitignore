@@ -1,0 +1,17 @@
+# Foundry build artifacts
+out/
+cache/
+broadcast/
+
+# Node (if any)
+node_modules/
+
+# Environment & secrets
+.env
+.env.*
+
+# OS files
+.DS_Store
+
+# Editor
+.vscode/

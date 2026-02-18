@@ -1,0 +1,23 @@
+{
+  "name": "api-scripts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "balances": "tsx src/balances.ts",
+    "transactions": "tsx src/transactions.ts",
+    "private-transfer": "tsx src/private-transfer.ts",
+    "withdraw": "tsx src/withdraw.ts",
+    "shielded-address": "tsx src/shielded-address.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "TypeScript CLI scripts for the Compliant Private Token API (EIP-712 signed requests)",
+  "dependencies": {
+    "@types/node": "^25.2.3",
+    "ethers": "^6.16.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
